@@ -1,4 +1,4 @@
-
+.btn,
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -8,6 +8,9 @@
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
+
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -15,7 +18,9 @@
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+.btn:active,
+.btn:focus {
+  outline: none;
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -63,27 +68,27 @@
   animation-fill-mode: backwards;
 }
 
-.btn-text{
+.btn-text {
   &:link,
-  &:visited{
+  &:visited {
     color: $color-primary-dark;
     display: inline-block;
     text-decoration: none;
     border-bottom: 1px solid $color-primary-light;
     padding: 3px;
     font-size: $default-font-size;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
-  &:hover{
+  &:hover {
     background-color: $color-primary-dark;
     color: $color-white;
-    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }
 
-  &:active{
-    box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+  &:active {
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.15);
     transform: translateY(0);
   }
 }
